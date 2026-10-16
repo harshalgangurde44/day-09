@@ -1,0 +1,295 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  background: #f4f6fb;
+  color: #1e293b;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 48px 16px;
+}
+
+.upload-card {
+  width: min(680px, 100%);
+  padding: 28px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px #0f172a0a;
+}
+
+.upload-heading,
+.files-heading,
+.upload-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.upload-heading {
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #6366f1;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.upload-heading h2 {
+  margin: 0;
+  font-size: 27px;
+}
+
+.muted {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.upload-heading .muted {
+  margin-bottom: 0;
+}
+
+.file-counter {
+  padding: 8px 12px;
+  background: #eef2ff;
+  border-radius: 9px;
+  color: #4338ca;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.dropzone {
+  padding: 30px 18px;
+  text-align: center;
+  border: 2px dashed #cbd5e1;
+  border-radius: 14px;
+  background: #fafbff;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.dropzone.dragging {
+  background: #eef2ff;
+  border-color: #6366f1;
+}
+
+.upload-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 12px;
+  color: #4f46e5;
+  background: #e0e7ff;
+  border-radius: 14px;
+  font-size: 29px;
+}
+
+.dropzone h3 {
+  margin: 0 0 7px;
+  font-size: 16px;
+}
+
+.dropzone p {
+  margin: 0 0 16px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.browse-btn,
+.upload-btn {
+  padding: 11px 17px;
+  color: #fff;
+  background: #4f46e5;
+  border: 0;
+  border-radius: 9px;
+  font-weight: 600;
+}
+
+.browse-btn:hover,
+.upload-btn:hover:not(:disabled) {
+  background: #4338ca;
+}
+
+.dropzone .file-rules {
+  margin: 17px 0 0;
+  font-size: 11px;
+}
+
+.message {
+  margin: 16px 0;
+  color: #475569;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.selected-files {
+  margin-top: 26px;
+}
+
+.files-heading {
+  margin-bottom: 12px;
+}
+
+.files-heading h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.files-heading span {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-top: 10px;
+  padding: 13px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.file-preview {
+  display: grid;
+  place-items: center;
+  flex: 0 0 52px;
+  width: 52px;
+  height: 52px;
+  overflow: hidden;
+  background: #f1f5f9;
+  border-radius: 9px;
+}
+
+.file-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pdf-icon {
+  color: #b91c1c;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.file-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.file-info h3 {
+  margin: 0 0 5px;
+  overflow: hidden;
+  font-size: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.file-info > p {
+  margin: 0;
+}
+
+.file-info .status-text {
+  margin-top: 5px;
+  font-size: 11px;
+  overflow-wrap: anywhere;
+}
+
+.status-text.success {
+  color: #15803d;
+}
+
+.status-text.error {
+  color: #b91c1c;
+}
+
+.progress-track {
+  height: 5px;
+  margin-top: 7px;
+  overflow: hidden;
+  background: #e2e8f0;
+  border-radius: 10px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #4f46e5;
+  border-radius: inherit;
+  transition: width 0.2s;
+}
+
+.remove-btn {
+  flex: 0 0 30px;
+  width: 30px;
+  height: 30px;
+  color: #64748b;
+  background: transparent;
+  border: 0;
+  border-radius: 7px;
+  font-size: 23px;
+}
+
+.remove-btn:hover {
+  color: #b91c1c;
+  background: #fee2e2;
+}
+
+.upload-footer {
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.upload-footer .muted {
+  margin: 0;
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: 20px 10px;
+  }
+
+  .upload-card {
+    padding: 18px 14px;
+  }
+
+  .upload-heading h2 {
+    font-size: 23px;
+  }
+
+  .dropzone {
+    padding: 24px 10px;
+  }
+}
